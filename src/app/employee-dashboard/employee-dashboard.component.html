@@ -1,0 +1,20 @@
+<div class="employee-dashboard">
+    <label *ngIf="this.employeeService.searchedEmplyee | async">{{employeesData.length}} Results Found</label>
+    <div class="block">
+        <div class="card" *ngFor="let employee of employeesData; let index=index;">
+          <img class="profile-icon" src="assets/profile.png" alt="Avatar">
+          <div class="actions">
+            <button type="button" class="edit" (click)="edit(employee.id)">Edit</button>
+            <button type="button" (click)="delete(employee.id)">Delete</button>
+          </div>
+          <div class="container">
+            <h4><b>{{employee.name}}</b></h4> 
+            <p>{{employee.designation}}</p> 
+            <p>{{employee.email}}</p>
+             <p>{{employee.contactno}}</p>
+          </div>
+        </div>
+        
+        </div>
+        
+</div>

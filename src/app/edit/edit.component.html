@@ -1,0 +1,60 @@
+<div class="employee-edit">
+    <label class="title">Edit Employee Form</label>
+
+    <div class="container">
+        <form [formGroup]="employeeForm">
+            <div class="row">
+                <div class="form-title">
+                    <label for="fname">Name</label>
+                </div>
+                <div class="form-fields">
+                    <input type="text" id="name" formControlName="name" placeholder="Enter Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-title">
+                    <label for="cname">Company Name</label>
+                </div>
+                <div class="form-fields">
+                    <input type="text" id="cname" formControlName="cname" placeholder="Enter Company Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-title">
+                    <label for="email">Email ID</label>
+                </div>
+                <div class="form-fields">
+                    <input type="email" id="email" formControlName="email" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-title">
+                    <label for="contactno">Contact No</label>
+                </div>
+                <div class="form-fields">
+                    <input type="number" id="contactno" formControlName="contactno" placeholder="Enter Contact Number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-title">
+                    <label for="designation">Designation</label>
+                </div>
+                <div class="form-fields">
+                    <select id="designation" formControlName="designation">
+                        <option value="" selected></option>
+                        <option value="Software Developer">Software Developer</option>
+                        <option value="Senior Software Developer">Senior Software Developer</option>
+                        <option value="Quality Assurance">Quality Assurance</option>
+                        <option value="Technical Lead">Technical Lead</option>
+                        <option value="Manager">Manager</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" (click)="updateForm()">
+            </div>
+        </form>
+    </div>
+
+</div>
